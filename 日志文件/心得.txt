@@ -1,0 +1,8 @@
+虚拟环境zhangmin1
+1、先把数据集按TIMIT/*/*/*/*.wav格式放好，然后运行data_preprocess.py 
+2、训练模型:train_speech_embedder.py 
+得到这些内容
+log_file: './speech_id_checkpoint/Stats'
+checkpoint_dir: './speech_id_checkpoint'
+3、测试模型：train_speech_embedder.py + config.yaml修改成training: !!bool "false" + 将第二步得到的训练模型拿出来改名成model.model
+4、dcector_create.py
